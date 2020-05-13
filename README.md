@@ -10,26 +10,41 @@ $ open https://github.com/ruslo/hunter
 
 ## Tasks
 
-- [ ] 1. Создать публичный репозиторий с названием **lab07** на сервисе **GitHub**
-- [ ] 2. Выполнить инструкцию учебного материала
-- [ ] 3. Ознакомиться со ссылками учебного материала
-- [ ] 4. Составить отчет и отправить ссылку личным сообщением в **Slack**
+- [x] 1. Создать публичный репозиторий с названием **lab07** на сервисе **GitHub**
+- [x] 2. Выполнить инструкцию учебного материала
+- [x] 3. Ознакомиться со ссылками учебного материала
+- [x] 4. Составить отчет и отправить ссылку личным сообщением в **Slack**
 
 ## Tutorial
 
 ```sh
-$ export GITHUB_USERNAME=<имя_пользователя>
+Cloning into 'lab07'...
+remote: Enumerating objects: 142, done.
+remote: Counting objects: 100% (142/142), done.
+Receiving obje
+remote: Total 142 (delta 45), reused 142 (delta 45), pack-reused 0
+Receiving objects: 100% (142/142), 1.29 MiB | 1.79 MiB/s, done.
+Resolving deltas: 100% (45/45), done.
+$ export GITHUB_USERNAME=scorpy2013
 $ alias gsed=sed
 ```
 
 ```sh
 $ cd ${GITHUB_USERNAME}/workspace
 $ pushd .
+~/Documents/GitHub/scorpy2013/lab07 ~/Documents/GitHub/scorpy2013/lab07
 $ source scripts/activate
 ```
 
 ```sh
 $ git clone https://github.com/${GITHUB_USERNAME}/lab06 projects/lab07
+Cloning into 'projects/lab07'...
+remote: Enumerating objects: 258, done.
+remote: Counting objects: 100% (258/258), done.
+remote: Compressing objects: 100% (155/155), done.
+
+Receiving objects: 100% (258/258), 2.22 MiB | 1.12 MiB/s, done.
+Resolving deltas: 100% (100/100), done.
 $ cd projects/lab07
 $ git remote remove origin
 $ git remote add origin https://github.com/${GITHUB_USERNAME}/lab07
@@ -121,6 +136,15 @@ install(TARGETS demo RUNTIME DESTINATION bin)
 ```sh
 $ mkdir tools
 $ git submodule add https://github.com/ruslo/polly tools/polly
+Cloning into 'C:/Users/User/Documents/GitHub/scorpy2013/lab07/projects/lab07/tools/polly'...
+remote: Enumerating objects: 29, done.
+remote: Counting objects: 100% (29/29), done.
+remote: Compressing objects: 100% (19/19), done.
+remote: Total 6423 (delta 10), reused 24 (delta 10), pack-reused 6394
+Receiving objects: 100% (6423/6423), 1.64 MiB | 2.27 MiB/s, done.
+Resolving deltas: 100% (4418/4418), done.
+warning: LF will be replaced by CRLF in .gitmodules.
+The file will have its original line endings in your working directory
 $ tools/polly/bin/polly.py --test
 $ tools/polly/bin/polly.py --install
 $ tools/polly/bin/polly.py --toolchain clang-cxx14
@@ -130,8 +154,16 @@ $ tools/polly/bin/polly.py --toolchain clang-cxx14
 
 ```sh
 $ popd
+~/Documents/GitHub/scorpy2013/lab07
 $ export LAB_NUMBER=07
 $ git clone https://github.com/tp-labs/lab${LAB_NUMBER} tasks/lab${LAB_NUMBER}
+Cloning into 'tasks/lab07'...
+remote: Enumerating objects: 30, done.
+remote: Counting objects: 100% (30/30), done.
+remote: Compressing objects: 100% (24/24), done.
+remote: Total 142 (delta 9), reused 17 (delta 6), pack-reused 112
+Receiving objects: 100% (142/142), 1.29 MiB | 1.89 MiB/s, done.
+Resolving deltas: 100% (45/45), done.
 $ mkdir reports/lab${LAB_NUMBER}
 $ cp tasks/lab${LAB_NUMBER}/README.md reports/lab${LAB_NUMBER}/REPORT.md
 $ cd reports/lab${LAB_NUMBER}
